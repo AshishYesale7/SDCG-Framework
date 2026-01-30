@@ -23,10 +23,11 @@ The CGC framework introduces:
 
 ## 🧪 Two-Front Falsification
 
-### Front 1: CGC Laboratory Test (Immediate)
+### Front 1: CGC Tabletop Validation Experiment (Immediate)
 
-- Gold plate configuration at d_c ≈ 95 μm
-- Tests vacuum-gravity coupling mechanism
+- Uses the established Casimir effect (Hendrik Casimir, 1948) as a precision probe
+- Gold plate configuration predicts crossover at d_c ≈ 95 μm
+- Tests whether vacuum fluctuations couple to gravity
 - Feasible with current AFM technology
 
 ### Front 2: Cosmological Test (2029)
@@ -60,7 +61,7 @@ CGC-Framework/
 
 ```bash
 # Clone repository
-git clone https://github.com/[username]/CGC-Framework.git
+git clone https://github.com/AshishYesale7/CGC-Framework.git
 cd CGC-Framework
 
 # Create virtual environment
@@ -98,13 +99,15 @@ Where:
 - `g(z) = exp[-(z-z_trans)²/2σ_z²]` — Redshift window
 - `S(ρ) = 1/[1 + (ρ/ρ_thresh)^α]` — Density screening
 
-**CGC Laboratory Test crossover:**
+**CGC Tabletop Validation crossover:**
 
 ```
 d_c = (π ℏc / 480 G σ²)^(1/4)
 ```
 
 For gold plates (1 μm thick): d_c ≈ 95 μm
+
+_The Casimir force (Hendrik Casimir, 1948) is established physics; the crossover at d_c is the novel CGC prediction._
 
 ## 📚 Citation
 
@@ -115,7 +118,7 @@ If you use this code or framework, please cite:
   author = {Yesale, Ashish Vasant},
   title = {Casimir-Gravity Crossover Framework: A Phenomenological Ansatz for Cosmological Tensions},
   year = {2026},
-  note = {Available at: https://github.com/[username]/CGC-Framework}
+  url = {https://github.com/AshishYesale7/CGC-Framework}
 }
 ```
 
@@ -136,7 +139,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Ashish Vasant Yesale**
 
 - Independent Researcher
-- Email: ashish.yesale@example.edu
+- GitHub: [@AshishYesale7](https://github.com/AshishYesale7)
 
 ---
 
