@@ -36,6 +36,8 @@ from typing import Dict, Any, Tuple, Optional, List
 
 from .config import PLANCK_BASELINE, CONSTANTS
 from .parameters import PARAM_BOUNDS, get_bounds_array
+from .cgc_physics import CGCPhysics, apply_cgc_to_sne_distance, apply_cgc_to_growth, \
+    apply_cgc_to_cmb, apply_cgc_to_bao, apply_cgc_to_lyalpha, apply_cgc_to_h0
 
 
 # =============================================================================
@@ -178,14 +180,14 @@ def log_likelihood_cmb(theta: np.ndarray, cmb_data: Dict[str, np.ndarray],
     ) * (ell / 1000)**(tilt/2)
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC Modification: Scale-dependent enhancement
+    # CGC Modification: Scale-dependent enhancement (using unified physics)
     # ═══════════════════════════════════════════════════════════════════════
     
-    # CGC modifies late-time ISW and lensing contributions
-    # This appears as scale-dependent enhancement at high ℓ
-    cgc_factor = 1 + mu * (ell / 1000)**(n_g / 2)
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
     
-    Dl_model = Dl_lcdm * cgc_factor
+    # Apply CGC modification using unified function
+    Dl_model = apply_cgc_to_cmb(Dl_lcdm, ell, cgc)
     
     # ═══════════════════════════════════════════════════════════════════════
     # Compute χ² (assuming diagonal covariance)
@@ -237,7 +239,7 @@ def log_likelihood_bao(theta: np.ndarray, bao_data: Dict[str, np.ndarray]) -> fl
         return 0.0
     
     # ═══════════════════════════════════════════════════════════════════════
-    # Cosmological distances
+    # ΛCDM BAO distances
     # ═══════════════════════════════════════════════════════════════════════
     
     H0 = h * 100
@@ -246,8 +248,8 @@ def log_likelihood_bao(theta: np.ndarray, bao_data: Dict[str, np.ndarray]) -> fl
     c = CONSTANTS['c']
     
     # Compute D_V/r_d for ΛCDM
-    def compute_DV_rd(z_arr):
-        """Compute D_V/r_d at given redshifts."""
+    def compute_DV_rd_lcdm(z_arr):
+        """Compute D_V/r_d at given redshifts for ΛCDM."""
         DV_rd = np.zeros_like(z_arr)
         
         for i, z_val in enumerate(z_arr):
@@ -268,15 +270,18 @@ def log_likelihood_bao(theta: np.ndarray, bao_data: Dict[str, np.ndarray]) -> fl
         
         return DV_rd
     
-    DV_rd_lcdm = compute_DV_rd(z)
+    DV_rd_lcdm = compute_DV_rd_lcdm(z)
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC Modification
+    # CGC Modification: (D_V/r_d)^CGC = (D_V/r_d)^ΛCDM × [1 + μ × (1+z)^(-n_g)]
+    # (Original formula from CGC_EQUATIONS_REFERENCE.txt, Eq. 6)
     # ═══════════════════════════════════════════════════════════════════════
     
-    # CGC modifies the expansion rate, affecting distances
-    cgc_factor = 1 + mu * (1 + z)**(-n_g)
-    DV_rd_model = DV_rd_lcdm * cgc_factor
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
+    
+    # Apply CGC modification using original formula
+    DV_rd_model = apply_cgc_to_bao(DV_rd_lcdm, z, cgc)
     
     # ═══════════════════════════════════════════════════════════════════════
     # Compute χ²
@@ -346,7 +351,7 @@ def log_likelihood_sne(theta: np.ndarray, sne_data: Dict[str, np.ndarray]) -> fl
     use_full_cov = 'inv_cov' in sne_data and sne_data['inv_cov'] is not None
     
     # ═══════════════════════════════════════════════════════════════════════
-    # Luminosity distance calculation (vectorized for efficiency)
+    # ΛCDM Luminosity distance calculation (vectorized)
     # ═══════════════════════════════════════════════════════════════════════
     
     H0 = h * 100
@@ -355,15 +360,14 @@ def log_likelihood_sne(theta: np.ndarray, sne_data: Dict[str, np.ndarray]) -> fl
     c = CONSTANTS['c']
     
     # Vectorized distance modulus computation
-    # Use adaptive integration points based on redshift
-    mu_model = np.zeros(n_sne)
+    D_L_lcdm = np.zeros(n_sne)
     
     for i, z_val in enumerate(z):
         if z_val < 1e-6:
-            mu_model[i] = 0
+            D_L_lcdm[i] = 1e-10
             continue
         
-        # Integration for comoving distance with more points at high-z
+        # Integration for comoving distance
         n_int = min(500, max(100, int(200 * z_val)))
         z_int = np.linspace(0, z_val, n_int)
         
@@ -374,22 +378,20 @@ def log_likelihood_sne(theta: np.ndarray, sne_data: Dict[str, np.ndarray]) -> fl
         D_C = (c / H0) * np.trapz(1.0 / E_z, z_int)
         
         # Luminosity distance in flat universe
-        D_L = D_C * (1 + z_val)  # Mpc
-        
-        # Distance modulus: μ = 5 log₁₀(D_L/10pc) = 5 log₁₀(D_L) + 25
-        mu_model[i] = 5 * np.log10(D_L) + 25
+        D_L_lcdm[i] = D_C * (1 + z_val)  # Mpc
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC Modification to distances
+    # CGC Modification: D_L^CGC = D_L^ΛCDM × [1 + 0.5μ × (1 - exp(-z/z_trans))]
+    # (Original formula from CGC_EQUATIONS_REFERENCE.txt, Eq. 7)
     # ═══════════════════════════════════════════════════════════════════════
     
-    # CGC modifies the effective gravitational constant, affecting distances
-    # The modification is scale-dependent and redshift-dependent
-    cgc_distance_factor = 1 + 0.5 * mu_cgc * (1 - np.exp(-z / z_trans))
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
     
     # Apply CGC correction to luminosity distance
-    D_L_lcdm = np.power(10, (mu_model - 25) / 5)
-    D_L_cgc = D_L_lcdm * cgc_distance_factor
+    D_L_cgc = apply_cgc_to_sne_distance(D_L_lcdm, z, cgc)
+    
+    # Distance modulus: μ = 5 log₁₀(D_L/10pc) = 5 log₁₀(D_L) + 25
     mu_model = 5 * np.log10(np.maximum(D_L_cgc, 1e-10)) + 25
     
     # ═══════════════════════════════════════════════════════════════════════
@@ -559,21 +561,19 @@ def log_likelihood_lyalpha(theta: np.ndarray,
     P_flux_lcdm = P_flux_z3 * z_evolution * A_cosmo * ns_factor
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC Modification
+    # CGC Modification (using unified physics)
     # ═══════════════════════════════════════════════════════════════════════
+    
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
     
     # Convert k from s/km to h/Mpc (approximate)
     # v = H(z) * r / (1+z), so 1 s/km ≈ 100 * h * (1+z)/E(z) km/s/Mpc
     # For z~3: 1 s/km ≈ 100 * h h/Mpc
     k_hmpc = k * 100 * h
     
-    # CGC characteristic scale
-    k_cgc = 0.1 * (1 + mu_cgc)
-    
-    # CGC enhances small-scale power
-    cgc_factor = 1 + mu_cgc * (k_hmpc / k_cgc)**n_g * np.exp(-(z - z_trans)**2 / (2 * 1.5**2))
-    
-    P_flux_model = P_flux_lcdm * cgc_factor
+    # Apply CGC modification using unified function
+    P_flux_model = apply_cgc_to_lyalpha(P_flux_lcdm, k_hmpc, z, cgc)
     
     # ═══════════════════════════════════════════════════════════════════════
     # χ² calculation with amplitude marginalization
@@ -663,12 +663,14 @@ def log_likelihood_growth(theta: np.ndarray,
     fs8_lcdm = f_lcdm * sigma8_z
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC Modification to growth
+    # CGC Modification to growth (using unified physics)
     # ═══════════════════════════════════════════════════════════════════════
     
-    # CGC enhances growth at low z through modified G_eff
-    cgc_factor = 1 + 0.1 * mu_cgc * (1 + z)**(-n_g)
-    fs8_model = fs8_lcdm * cgc_factor
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
+    
+    # Apply CGC modification: fσ8_CGC = fσ8_ΛCDM × [1 + 0.1μ × (1+z)^(-n_g)]
+    fs8_model = apply_cgc_to_growth(fs8_lcdm, z, cgc)
     
     # ═══════════════════════════════════════════════════════════════════════
     # Compute χ²
@@ -720,11 +722,14 @@ def log_likelihood_h0(theta: np.ndarray, h0_data: Dict[str, Any],
     chi2 = 0.0
     
     # ═══════════════════════════════════════════════════════════════════════
-    # CGC H0 modification (from modified late-time expansion)
+    # CGC H0 modification (using unified physics)
     # ═══════════════════════════════════════════════════════════════════════
     
-    # CGC effectively rescales H0 through modified expansion
-    H0_eff = H0_model * (1 + 0.1 * mu_cgc)
+    # Create CGC physics instance
+    cgc = CGCPhysics.from_theta(theta)
+    
+    # Apply CGC modification using unified function
+    H0_eff = apply_cgc_to_h0(H0_model, cgc)
     
     # ═══════════════════════════════════════════════════════════════════════
     # Likelihood contributions

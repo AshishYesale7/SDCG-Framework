@@ -1,0 +1,47 @@
+{
+  "analysis": "Stacking Analysis: Void vs Cluster Dwarf Velocity Dispersions",
+  "date": "2026-02-02T18:15:51.684186",
+  "mass_range": "5.0 < log(M*/M_sun) < 7.0",
+  "results": {
+    "void_dwarfs": {
+      "N": 6,
+      "mean_sigma_km_s": 11.73,
+      "std_sigma_km_s": 3.49,
+      "galaxies": [
+        9.3,
+        11.5,
+        7.8,
+        15.8,
+        17.0,
+        9.0
+      ]
+    },
+    "cluster_dwarfs": {
+      "N": 8,
+      "mean_sigma_km_s": 8.36,
+      "std_sigma_km_s": 1.77,
+      "galaxies": [
+        9.5,
+        9.1,
+        9.2,
+        7.9,
+        6.6,
+        9.3,
+        10.6,
+        4.7
+      ]
+    },
+    "observed_ratio": 1.4031,
+    "observed_difference_percent": 40.31
+  },
+  "SDCG_prediction": {
+    "mu_eff_void": 0.149,
+    "mu_eff_cluster": 0.0005,
+    "predicted_enhancement_percent": 7.0,
+    "predicted_ratio": 1.07
+  },
+  "statistical_significance": {
+    "t_statistic": 2.16,
+    "notes": "Preliminary - larger samples needed for definitive test"
+  }
+}

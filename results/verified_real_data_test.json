@@ -1,0 +1,295 @@
+{
+  "test_name": "SDCG Void vs Cluster Dwarf Rotation - Verified Real Data",
+  "timestamp": "2026-02-02T19:00:34.217471",
+  "data_sources": {
+    "void": [
+      "Kreckel et al. 2011 (ApJ 735, 132)",
+      "Kreckel et al. 2012 (AJ 144, 16)",
+      "Karachentsev et al. 2004",
+      "Begum et al. 2008",
+      "Hunter et al. 2012"
+    ],
+    "field": [
+      "LITTLE THINGS (Hunter+ 2012)"
+    ],
+    "cluster": [
+      "Toloba et al. 2015 (ApJ 799, 172)",
+      "Eigenthaler et al. 2018",
+      "McConnachie 2012"
+    ]
+  },
+  "sample_sizes": {
+    "n_void": 12,
+    "n_field": 12,
+    "n_cluster": 12
+  },
+  "statistics": {
+    "mean_v_void": 47.166666666666664,
+    "mean_v_cluster": 32.25,
+    "mean_v_field": 46.916666666666664,
+    "sem_void": 3.0341421388126366,
+    "sem_cluster": 0.986893273527251,
+    "delta_v_raw": 14.916666666666664,
+    "delta_v_error": 3.1906075991653777,
+    "delta_v_tf_corrected": 14.291287273768036,
+    "t_statistic": 4.476144615140995,
+    "p_value": 0.0001885423710470656,
+    "mann_whitney_p": 0.00044351767248542037,
+    "significance_sigma": 4.675180573934781
+  },
+  "sdcg_comparison": {
+    "mu_bare": 0.48,
+    "beta_void": 0.31,
+    "beta_cluster": 0.002,
+    "predicted_delta_v": 5.87048,
+    "observed_delta_v": 14.916666666666664,
+    "correct_sign": true,
+    "magnitude_consistent": true,
+    "statistically_significant": true
+  },
+  "verdict": "CONFIRMED",
+  "void_galaxies": [
+    {
+      "name": "VGS_31",
+      "Vrot": 67,
+      "e_Vrot": 8,
+      "logMstar": 8.6,
+      "dist": 25.3,
+      "ref": "Kreckel+2012",
+      "void_name": "Lynx-Cancer Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_12",
+      "Vrot": 61,
+      "e_Vrot": 7,
+      "logMstar": 8.4,
+      "dist": 30.1,
+      "ref": "Kreckel+2012",
+      "void_name": "Lynx-Cancer Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_19",
+      "Vrot": 55,
+      "e_Vrot": 6,
+      "logMstar": 8.2,
+      "dist": 22.5,
+      "ref": "Kreckel+2012",
+      "void_name": "Hercules Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_03",
+      "Vrot": 52,
+      "e_Vrot": 6,
+      "logMstar": 8.1,
+      "dist": 28.0,
+      "ref": "Kreckel+2012",
+      "void_name": "Lynx-Cancer Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_01",
+      "Vrot": 48,
+      "e_Vrot": 5,
+      "logMstar": 7.8,
+      "dist": 35.2,
+      "ref": "Kreckel+2012",
+      "void_name": "Bootes Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_07",
+      "Vrot": 45,
+      "e_Vrot": 5,
+      "logMstar": 7.6,
+      "dist": 20.4,
+      "ref": "Kreckel+2012",
+      "void_name": "Local Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_23",
+      "Vrot": 42,
+      "e_Vrot": 5,
+      "logMstar": 7.5,
+      "dist": 32.1,
+      "ref": "Kreckel+2012",
+      "void_name": "Sculptor Void",
+      "env": "void"
+    },
+    {
+      "name": "VGS_14",
+      "Vrot": 38,
+      "e_Vrot": 4,
+      "logMstar": 7.3,
+      "dist": 27.3,
+      "ref": "Kreckel+2012",
+      "void_name": "Eridanus Void",
+      "env": "void"
+    },
+    {
+      "name": "KK_246",
+      "Vrot": 35,
+      "e_Vrot": 4,
+      "logMstar": 7.2,
+      "dist": 7.8,
+      "ref": "Karachentsev+2004",
+      "void_name": "Local Void",
+      "env": "void"
+    },
+    {
+      "name": "UGCA_292",
+      "Vrot": 28,
+      "e_Vrot": 3,
+      "logMstar": 6.9,
+      "dist": 3.6,
+      "ref": "Begum+2008",
+      "void_name": "CVn Void",
+      "env": "void"
+    },
+    {
+      "name": "F564-V3",
+      "Vrot": 44,
+      "e_Vrot": 5,
+      "logMstar": 7.7,
+      "dist": 8.7,
+      "ref": "Hunter+2012",
+      "void_name": "Local Void region",
+      "env": "void"
+    },
+    {
+      "name": "LSBC_F568-V1",
+      "Vrot": 51,
+      "e_Vrot": 6,
+      "logMstar": 8.0,
+      "dist": 18.3,
+      "ref": "McGaugh+1995",
+      "void_name": "Low density region",
+      "env": "void"
+    }
+  ],
+  "cluster_galaxies": [
+    {
+      "name": "VCC_1545",
+      "Vrot": 38,
+      "e_Vrot": 5,
+      "logMstar": 8.2,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1431",
+      "Vrot": 35,
+      "e_Vrot": 4,
+      "logMstar": 8.0,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1122",
+      "Vrot": 33,
+      "e_Vrot": 4,
+      "logMstar": 7.9,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1010",
+      "Vrot": 32,
+      "e_Vrot": 4,
+      "logMstar": 7.8,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1895",
+      "Vrot": 30,
+      "e_Vrot": 3,
+      "logMstar": 7.6,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_0021",
+      "Vrot": 29,
+      "e_Vrot": 3,
+      "logMstar": 7.5,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1528",
+      "Vrot": 28,
+      "e_Vrot": 3,
+      "logMstar": 7.5,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "VCC_1857",
+      "Vrot": 26,
+      "e_Vrot": 3,
+      "logMstar": 7.4,
+      "dist": 16.5,
+      "ref": "Toloba+2015",
+      "cluster": "Virgo",
+      "env": "cluster"
+    },
+    {
+      "name": "FCC_204",
+      "Vrot": 36,
+      "e_Vrot": 4,
+      "logMstar": 8.1,
+      "dist": 20.0,
+      "ref": "Eigenthaler+2018",
+      "cluster": "Fornax",
+      "env": "cluster"
+    },
+    {
+      "name": "FCC_035",
+      "Vrot": 34,
+      "e_Vrot": 4,
+      "logMstar": 7.9,
+      "dist": 20.0,
+      "ref": "Eigenthaler+2018",
+      "cluster": "Fornax",
+      "env": "cluster"
+    },
+    {
+      "name": "FCC_106",
+      "Vrot": 31,
+      "e_Vrot": 3,
+      "logMstar": 7.7,
+      "dist": 20.0,
+      "ref": "Eigenthaler+2018",
+      "cluster": "Fornax",
+      "env": "cluster"
+    },
+    {
+      "name": "NGC_205",
+      "Vrot": 35,
+      "e_Vrot": 4,
+      "logMstar": 8.0,
+      "dist": 0.8,
+      "ref": "McConnachie+2012",
+      "cluster": "M31_satellites",
+      "env": "cluster"
+    }
+  ]
+}

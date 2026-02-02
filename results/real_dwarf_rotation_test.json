@@ -1,0 +1,22 @@
+{
+  "test_name": "SDCG Void vs Cluster Dwarf Rotation",
+  "prediction": "Void dwarfs rotate faster than cluster dwarfs",
+  "data_sources": [
+    "Void Galaxy Survey (Kreckel+ 2012)",
+    "LITTLE THINGS (Hunter+ 2012)",
+    "Virgo/Fornax cluster surveys"
+  ],
+  "n_void": 10,
+  "n_field": 10,
+  "n_cluster": 10,
+  "mean_tf_residual_void": 44.7850220801685,
+  "mean_tf_residual_cluster": 30.639896786005302,
+  "delta_v_void_minus_cluster": 14.1451252941632,
+  "error": 3.1043802525848623,
+  "t_statistic": 4.322680542833292,
+  "p_value": 0.00040996118297840746,
+  "significance_sigma": 4.556505370882083,
+  "sdcg_prediction_km_s": 6.6528,
+  "correct_sign": true,
+  "status": "PARTIALLY_CONSISTENT"
+}

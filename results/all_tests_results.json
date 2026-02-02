@@ -1,0 +1,13 @@
+{
+  "test_1": {
+    "test_name": "Dwarf Velocity",
+    "n_void": 21,
+    "n_cluster": 24,
+    "mean_void": 67.42835676776443,
+    "mean_cluster": 59.94569420125449,
+    "delta_v": 7.482662566509937,
+    "error": 7.564019090506539,
+    "t_statistic": 0.9892442730480795,
+    "sdcg_prediction_mu15": 3.5670497851339023,
+    "sdcg_prediction_mu05": 1.1890165950446343,
+    "consistent_with_sdcg": 

@@ -1,0 +1,39 @@
+{
+  "experiment": "Gold Plate Casimir Experiment",
+  "parameters": {
+    "separation_um": 95,
+    "plate_area_cm2": 1.0,
+    "temperature_K": 300
+  },
+  "forces_N": {
+    "Casimir_zero_T": 1.596e-15,
+    "Casimir_thermal_300K": 2.498e-14,
+    "Casimir_total_300K": 2.657e-14,
+    "Casimir_total_4K": 1.929e-15
+  },
+  "SDCG_signal": {
+    "mu_eff_in_gold": 0.15,
+    "screening_factor_gold": 1e-08,
+    "effective_deviation": 1.5e-09,
+    "predicted_force_deviation_N": 3.986e-23
+  },
+  "noise_sources_N": {
+    "thermal_300K": 1.355e-08,
+    "thermal_4K": 1.564e-09,
+    "seismic": 1e-15,
+    "patch_potentials": 2.657e-16
+  },
+  "signal_to_noise": {
+    "SNR_300K": 1.5e-07,
+    "SNR_4K": 2.548e-14,
+    "verdict": "CHALLENGING - requires modulation technique"
+  },
+  "modulation_technique": {
+    "description": "Swap gold plates with silicon of identical geometry",
+    "rationale": "Different screening factors: S(Au) << S(Si)",
+    "S_gold": 1e-08,
+    "S_silicon": 1e-05,
+    "differential_signal": "3 orders of magnitude enhancement",
+    "advantage": "Casimir forces cancel; only SDCG difference remains"
+  }
+}

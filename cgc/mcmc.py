@@ -1,8 +1,8 @@
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                           CGC MCMC Module                                    ║
+║                  SDCG MCMC Module (v7 - Honest Framework)                    ║
 ║                                                                              ║
-║  Implements Markov Chain Monte Carlo (MCMC) sampling for CGC parameter      ║
+║  Implements Markov Chain Monte Carlo (MCMC) sampling for SDCG parameter     ║
 ║  estimation using the emcee ensemble sampler.                                ║
 ║                                                                              ║
 ║  Features:                                                                    ║
@@ -11,6 +11,12 @@
 ║    • Convergence diagnostics (R-hat, ESS)                                   ║
 ║    • Progress tracking and checkpointing                                     ║
 ║    • Parallel execution support                                              ║
+║                                                                              ║
+║  v7 HONEST FRAMEWORK:                                                        ║
+║    • Parameters are PHENOMENOLOGICAL, not QFT-derived                       ║
+║    • μ, n_g, z_trans are fitted to data, not predicted                      ║
+║    • α = 2 screening is chameleon-specific assumption                       ║
+║    • No false claims of "EFT validation"                                    ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
 Usage
@@ -33,6 +39,167 @@ import warnings
 from .config import PATHS, MCMC_DEFAULTS
 from .parameters import CGCParameters, get_bounds_array
 from .likelihoods import log_probability
+
+# =============================================================================
+# SDCG PHENOMENOLOGICAL FRAMEWORK
+# =============================================================================
+#
+# CRITICAL NOTE ON THEORETICAL STATUS:
+# The SDCG framework is PHENOMENOLOGICAL, not a first-principles derivation.
+# The scalar-tensor EFT motivates the functional form G_eff(k,z,ρ), but:
+#
+# 1. μ is NOT derived from QFT - the ln(M_Pl/H₀) factor in early versions
+#    was an ad hoc insertion, not proper renormalization group running.
+#    μ must be treated as a FREE PARAMETER constrained by data.
+#
+# 2. n_g is MODEL-DEPENDENT - the value depends on the specific scalar
+#    potential and coupling to matter. It is NOT fixed by fundamental physics.
+#
+# 3. The screening exponent α=2 assumes chameleon-like m_eff² ~ ρ, which is
+#    a SPECIAL CASE, not a general result of the Klein-Gordon equation.
+#
+# 4. z_trans is physically motivated (near deceleration-acceleration transition)
+#    but the delay mechanism is phenomenological, not derived.
+#
+# Reference values for comparison (NOT predictions):
+BETA_0_REFERENCE = 0.74  # Typical one-loop coupling (order of magnitude only)
+N_G_REFERENCE = 0.5      # Reasonable phenomenological range: 0.1 - 1.0
+Z_TRANS_REFERENCE = 1.5  # Near z_acc ≈ 0.67, but not precisely derived
+
+# The only robust constraint is:
+# μ_eff < 0.1 from Lyα forest (model-independent upper bound)
+
+
+# =============================================================================
+# PHENOMENOLOGICAL PARAMETER ANALYSIS (HONEST ASSESSMENT)
+# =============================================================================
+#
+# NOTE: The functions below report fitted parameter values and compare them
+# to reference ranges. These are NOT "validations" against first-principles
+# predictions, since μ, n_g, and z_trans are phenomenological parameters.
+
+# Reference ranges for phenomenological consistency (NOT predictions)
+MU_MAX_LYALPHA = 0.1      # Upper bound from Lyα forest (model-independent)
+N_G_RANGE = (0.01, 2.0)   # Reasonable range for scale dependence
+Z_TRANS_RANGE = (0.5, 3.0)  # Near matter-DE transition
+
+
+def check_parameter_physicality(param_name: str, value: float, 
+                                 uncertainty: float = None) -> Dict[str, Any]:
+    """
+    Check if fitted parameter is in a physically reasonable range.
+    
+    This is NOT a validation against theory predictions - it simply
+    checks that the fitted value is within sensible bounds.
+    
+    Parameters
+    ----------
+    param_name : str
+        Name of parameter ('mu', 'n_g', 'z_trans').
+    value : float
+        Fitted value.
+    uncertainty : float, optional
+        Uncertainty on the value.
+    
+    Returns
+    -------
+    dict
+        Assessment results.
+    """
+    if param_name == 'mu':
+        in_range = 0 < value < MU_MAX_LYALPHA
+        reference = f"< {MU_MAX_LYALPHA} (Lyα upper bound)"
+    elif param_name == 'n_g':
+        in_range = N_G_RANGE[0] < value < N_G_RANGE[1]
+        reference = f"{N_G_RANGE[0]} - {N_G_RANGE[1]} (model-dependent)"
+    elif param_name == 'z_trans':
+        in_range = Z_TRANS_RANGE[0] < value < Z_TRANS_RANGE[1]
+        reference = f"{Z_TRANS_RANGE[0]} - {Z_TRANS_RANGE[1]} (near z_acc)"
+    else:
+        in_range = True
+        reference = "N/A"
+    
+    return {
+        'parameter': param_name,
+        'value': value,
+        'uncertainty': uncertainty,
+        'reference_range': reference,
+        'in_range': in_range
+    }
+
+
+def print_physics_validation(chains: np.ndarray) -> None:
+    """
+    Print phenomenological parameter assessment.
+    
+    NOTE: This reports fitted values and checks they are in physically
+    reasonable ranges. It does NOT validate against "EFT predictions"
+    since μ, n_g, z_trans are phenomenological, not derived from QFT.
+    
+    Parameters
+    ----------
+    chains : np.ndarray
+        MCMC chains, shape (n_samples, n_dim).
+    """
+    # Extract SDCG parameters (indices 6-9: μ, n_g, z_trans, ρ_thresh)
+    mu_samples = chains[:, 6]
+    n_g_samples = chains[:, 7]
+    z_trans_samples = chains[:, 8]
+    rho_thresh_samples = chains[:, 9]
+    
+    # Compute statistics
+    mu_mean, mu_std = np.mean(mu_samples), np.std(mu_samples)
+    n_g_mean, n_g_std = np.mean(n_g_samples), np.std(n_g_samples)
+    z_trans_mean, z_trans_std = np.mean(z_trans_samples), np.std(z_trans_samples)
+    rho_thresh_mean, rho_thresh_std = np.mean(rho_thresh_samples), np.std(rho_thresh_samples)
+    
+    print(f"\n{'='*70}")
+    print("SDCG PHENOMENOLOGICAL PARAMETER CONSTRAINTS")
+    print("(These are fitted values, NOT first-principles predictions)")
+    print(f"{'='*70}")
+    
+    # Parameter summary
+    print(f"\n┌────────────────────────────────────────────────────────────────────┐")
+    print(f"│ FITTED SDCG PARAMETERS                                             │")
+    print(f"├────────────────────────────────────────────────────────────────────┤")
+    print(f"│  μ (coupling)     = {mu_mean:7.4f} ± {mu_std:.4f}                          │")
+    print(f"│  n_g (spectral)   = {n_g_mean:7.4f} ± {n_g_std:.4f}                          │")
+    print(f"│  z_trans          = {z_trans_mean:7.3f} ± {z_trans_std:.3f}                            │")
+    print(f"│  ρ_thresh         = {rho_thresh_mean:7.1f} ± {rho_thresh_std:.1f}                            │")
+    print(f"└────────────────────────────────────────────────────────────────────┘")
+    
+    # Physicality checks
+    mu_check = check_parameter_physicality('mu', mu_mean, mu_std)
+    n_g_check = check_parameter_physicality('n_g', n_g_mean, n_g_std)
+    z_trans_check = check_parameter_physicality('z_trans', z_trans_mean, z_trans_std)
+    
+    print(f"\n┌────────────────────────────────────────────────────────────────────┐")
+    print(f"│ PHYSICALITY CHECKS (Are values in reasonable ranges?)              │")
+    print(f"├────────────────────────────────────────────────────────────────────┤")
+    
+    status = "✓" if mu_check['in_range'] else "✗ VIOLATES Lyα BOUND"
+    print(f"│  μ:      {mu_mean:.4f}  vs  {mu_check['reference_range']:30s} {status:8s}│")
+    
+    status = "✓" if n_g_check['in_range'] else "✗"
+    print(f"│  n_g:    {n_g_mean:.4f}  vs  {n_g_check['reference_range']:30s} {status:8s}│")
+    
+    status = "✓" if z_trans_check['in_range'] else "✗"
+    print(f"│  z_trans:{z_trans_mean:.3f}  vs  {z_trans_check['reference_range']:30s} {status:8s}│")
+    print(f"└────────────────────────────────────────────────────────────────────┘")
+    
+    # Honest assessment
+    print(f"\n┌────────────────────────────────────────────────────────────────────┐")
+    print(f"│ HONEST THEORETICAL ASSESSMENT                                      │")
+    print(f"├────────────────────────────────────────────────────────────────────┤")
+    print(f"│  • μ is PHENOMENOLOGICAL - constrained by Lyα, not derived        │")
+    print(f"│  • n_g is MODEL-DEPENDENT - not fixed by fundamental physics      │")
+    print(f"│  • z_trans is physically motivated but not precisely derived      │")
+    print(f"│  • Screening exponent α=2 is a chameleon-specific assumption      │")
+    print(f"├────────────────────────────────────────────────────────────────────┤")
+    print(f"│  PREDICTIVE POWER: Limited. SDCG is a 4-parameter extension of    │")
+    print(f"│  ΛCDM that can fit data but makes few testable predictions.       │")
+    print(f"│  The decisive test is scale-dependent growth with DESI/Euclid.    │")
+    print(f"└────────────────────────────────────────────────────────────────────┘")
 
 
 # =============================================================================
@@ -74,19 +241,22 @@ class MCMCSampler:
     """
     
     def __init__(self, data: Dict[str, Any], n_walkers: int = 32,
-                 n_dim: int = 10, likelihood_kwargs: Dict = None):
+                 n_dim: int = 10, likelihood_kwargs: Dict = None,
+                 n_processes: int = None):
         """Initialize the MCMC sampler."""
         self.data = data
         self.n_walkers = n_walkers
         self.n_dim = n_dim
         self.likelihood_kwargs = likelihood_kwargs or {}
+        self.n_processes = n_processes  # For multiprocessing
         
         self._sampler = None
         self._initial_pos = None
         self._n_steps_run = 0
+        self._pool = None
     
     def _setup_sampler(self):
-        """Set up the emcee sampler."""
+        """Set up the emcee sampler with optional multiprocessing."""
         try:
             import emcee
         except ImportError:
@@ -95,14 +265,30 @@ class MCMCSampler:
             )
         
         # Create log probability function with data
-        def log_prob_fn(theta):
-            return log_probability(theta, self.data, **self.likelihood_kwargs)
+        # Note: For multiprocessing, data must be picklable
+        data_copy = self.data
+        likelihood_kwargs_copy = self.likelihood_kwargs
         
-        self._sampler = emcee.EnsembleSampler(
-            self.n_walkers,
-            self.n_dim,
-            log_prob_fn
-        )
+        def log_prob_fn(theta):
+            return log_probability(theta, data_copy, **likelihood_kwargs_copy)
+        
+        # Setup multiprocessing pool if requested
+        if self.n_processes is not None and self.n_processes > 1:
+            from multiprocessing import Pool
+            self._pool = Pool(processes=self.n_processes)
+            print(f"  ⚡ Using {self.n_processes} CPU cores for parallel likelihood evaluation")
+            self._sampler = emcee.EnsembleSampler(
+                self.n_walkers,
+                self.n_dim,
+                log_prob_fn,
+                pool=self._pool
+            )
+        else:
+            self._sampler = emcee.EnsembleSampler(
+                self.n_walkers,
+                self.n_dim,
+                log_prob_fn
+            )
     
     def initialize(self, params: CGCParameters = None, 
                    scatter: float = 1e-3,
@@ -361,6 +547,7 @@ def run_mcmc(data: Dict[str, Any],
              params: CGCParameters = None,
              include_sne: bool = False,
              include_lyalpha: bool = False,
+             n_processes: int = None,
              seed: int = None,
              save_chains: bool = True,
              verbose: bool = True) -> Tuple[Any, np.ndarray]:
@@ -389,6 +576,10 @@ def run_mcmc(data: Dict[str, Any],
     
     include_lyalpha : bool, default=False
         Include Lyman-α in likelihood.
+    
+    n_processes : int, optional
+        Number of CPU cores for parallel likelihood evaluation.
+        If None, uses single-threaded execution.
     
     seed : int, optional
         Random seed for reproducibility.
@@ -449,16 +640,22 @@ def run_mcmc(data: Dict[str, Any],
         'include_lyalpha': include_lyalpha
     }
     
-    # Create sampler
+    # Create sampler with optional multiprocessing
     mcmc = MCMCSampler(
         data=data,
         n_walkers=n_walkers,
-        likelihood_kwargs=likelihood_kwargs
+        likelihood_kwargs=likelihood_kwargs,
+        n_processes=n_processes
     )
     
     # Initialize and run
     mcmc.initialize(params=params, seed=seed)
     mcmc.run(n_steps=n_steps, progress=verbose)
+    
+    # Clean up multiprocessing pool if used
+    if mcmc._pool is not None:
+        mcmc._pool.close()
+        mcmc._pool.join()
     
     # Get chains
     discard = int(0.2 * n_steps)
@@ -488,6 +685,9 @@ def run_mcmc(data: Dict[str, Any],
         
         print(f"\nConverged: {'Yes' if converged else 'No - consider more steps'}")
         print(f"Chain shape: {chains.shape}")
+        
+        # EFT Physics Validation (v6 enhancement)
+        print_physics_validation(chains)
     
     # Save chains
     if save_chains:

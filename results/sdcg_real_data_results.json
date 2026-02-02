@@ -1,0 +1,34 @@
+{
+  "galaxies_analyzed": 175,
+  "voids_used": 500,
+  "environment_counts": {
+    "void": 142,
+    "underdense": 33
+  },
+  "tully_fisher": {
+    "slope": 0.243456849121392,
+    "intercept": 1.3920138539660607
+  },
+  "residuals_by_environment": {
+    "void": {
+      "n": 142,
+      "pct_offset": 1.214676281658611,
+      "significance": 1.40162484011236
+    },
+    "underdense": {
+      "n": 33,
+      "pct_offset": -5.0626507072670694,
+      "significance": -2.8782636950631444
+    }
+  },
+  "sdcg_parameters": {
+    "mu_bare": 0.48,
+    "beta_0": 0.7,
+    "k_0": 0.05
+  },
+  "lyman_alpha": {
+    "mu_eff": 5.76e-05,
+    "enhancement_pct": 3.3177599999999997e-07,
+    "passes_constraint": true
+  }
+}

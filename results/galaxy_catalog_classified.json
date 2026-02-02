@@ -1,0 +1,1752 @@
+[
+  {
+    "name": "SPARC_136",
+    "ra": 85.98093667422923,
+    "dec": -5.726483831052625,
+    "distance": 30.330818327740957,
+    "v_rot": 69.20376012989308,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_056",
+    "ra": 171.04100805428916,
+    "dec": -17.76139715887426,
+    "distance": 17.692770411398907,
+    "v_rot": 216.92768219566221,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_036",
+    "ra": 1.0956737667972538,
+    "dec": 18.755097043513995,
+    "distance": 16.981673645608936,
+    "v_rot": 92.9191847902752,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_086",
+    "ra": 209.8100055772729,
+    "dec": 6.3521849120572265,
+    "distance": 42.232597872980215,
+    "v_rot": 101.64771984962509,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_098",
+    "ra": 184.6727898317402,
+    "dec": 52.226198270889675,
+    "distance": 31.81438780652601,
+    "v_rot": 128.1088989478909,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_063",
+    "ra": 31.60695531048266,
+    "dec": 43.272905065189335,
+    "distance": 89.11682008970278,
+    "v_rot": 157.76769177519728,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_169",
+    "ra": 349.70193810705,
+    "dec": -33.67284199489054,
+    "distance": 18.291740915637234,
+    "v_rot": 94.52673102807745,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_095",
+    "ra": 199.76583662170947,
+    "dec": 22.755683552892634,
+    "distance": 24.14924246128699,
+    "v_rot": 119.40162549234377,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_001",
+    "ra": 281.962608651274,
+    "dec": -23.268894184013792,
+    "distance": 9.884699647958728,
+    "v_rot": 100.96807064743881,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_133",
+    "ra": 105.3372795957254,
+    "dec": -34.50091072489464,
+    "distance": 150.0,
+    "v_rot": 135.67091033211815,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_066",
+    "ra": 70.51270492423777,
+    "dec": 22.267075226409403,
+    "distance": 24.679890329687076,
+    "v_rot": 104.38234737015448,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_014",
+    "ra": 24.813685667310054,
+    "dec": 63.32691857576122,
+    "distance": 35.28377464460712,
+    "v_rot": 125.29119456828461,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_106",
+    "ra": 129.60688484875234,
+    "dec": 73.51658591915624,
+    "distance": 23.314111091339704,
+    "v_rot": 105.08418946140326,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_125",
+    "ra": 319.0626692705956,
+    "dec": -10.272280903916455,
+    "distance": 36.257782219190375,
+    "v_rot": 70.8144982985765,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_101",
+    "ra": 173.25214463648786,
+    "dec": 32.93757592679214,
+    "distance": 14.597826155940934,
+    "v_rot": 171.24297640915066,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_109",
+    "ra": 167.1645766242022,
+    "dec": 19.154985602517144,
+    "distance": 16.92584790927494,
+    "v_rot": 147.4793665427072,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_089",
+    "ra": 93.21030508446809,
+    "dec": -23.31910748650877,
+    "distance": 34.45625448544381,
+    "v_rot": 85.39829058794645,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_078",
+    "ra": 168.92593141071515,
+    "dec": 3.290881652166024,
+    "distance": 60.75049796681217,
+    "v_rot": 298.4969817631078,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_050",
+    "ra": 191.57586729983828,
+    "dec": 49.462308216167244,
+    "distance": 30.91063072383266,
+    "v_rot": 111.4848169162808,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_120",
+    "ra": 161.15904156382678,
+    "dec": 32.27687110199917,
+    "distance": 21.55378683399463,
+    "v_rot": 229.91129877170607,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_061",
+    "ra": 139.99856502350076,
+    "dec": -25.593210196616226,
+    "distance": 54.8972828772499,
+    "v_rot": 78.48987073002806,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_023",
+    "ra": 159.50361533927975,
+    "dec": -58.18340035668782,
+    "distance": 18.643624116087388,
+    "v_rot": 224.28156484141113,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_029",
+    "ra": 185.64443609378083,
+    "dec": -34.647796726440326,
+    "distance": 82.14882392460882,
+    "v_rot": 78.81410254033733,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_135",
+    "ra": 318.9702294340459,
+    "dec": -52.87002334004651,
+    "distance": 16.32788755919452,
+    "v_rot": 205.76943852731577,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_082",
+    "ra": 185.246565576652,
+    "dec": 4.18041499194383,
+    "distance": 21.488937437273815,
+    "v_rot": 93.98074955783673,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_134",
+    "ra": 24.160620680627297,
+    "dec": 42.24164033681478,
+    "distance": 27.966189731903103,
+    "v_rot": 124.56541071723325,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_087",
+    "ra": 194.62201609003392,
+    "dec": 1.9671352758160652,
+    "distance": 54.05695396829453,
+    "v_rot": 159.20818978992935,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_115",
+    "ra": 261.96123815907,
+    "dec": 25.980807768828655,
+    "distance": 9.248160810348898,
+    "v_rot": 287.69600371511456,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_011",
+    "ra": 72.93543323532349,
+    "dec": 59.79780359440385,
+    "distance": 12.24320802247421,
+    "v_rot": 143.70291245165765,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_025",
+    "ra": 194.7199816536674,
+    "dec": -77.062945516401,
+    "distance": 27.534487224630357,
+    "v_rot": 205.7391352512334,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_158",
+    "ra": 307.6147370942949,
+    "dec": 71.96183524699266,
+    "distance": 21.207358594038656,
+    "v_rot": 179.21501200738123,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_070",
+    "ra": 148.09603725613917,
+    "dec": -43.0547432722279,
+    "distance": 81.16881825539106,
+    "v_rot": 93.95994459913285,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_141",
+    "ra": 224.75396933493482,
+    "dec": -26.54938963704965,
+    "distance": 10.62257283074478,
+    "v_rot": 112.35812166992675,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_148",
+    "ra": 296.01586727355595,
+    "dec": -13.982294809160429,
+    "distance": 150.0,
+    "v_rot": 108.56222916903006,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_166",
+    "ra": 83.26083818371748,
+    "dec": -30.313998577941916,
+    "distance": 19.888499209917686,
+    "v_rot": 121.76023734602384,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_060",
+    "ra": 204.3362283537834,
+    "dec": -48.84138619051844,
+    "distance": 33.51536360690007,
+    "v_rot": 126.13528108625833,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_074",
+    "ra": 33.7114538745283,
+    "dec": 17.34276782599353,
+    "distance": 17.75207602063748,
+    "v_rot": 114.37431323404834,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_117",
+    "ra": 189.28447927077477,
+    "dec": 69.8974155107409,
+    "distance": 72.6521742966191,
+    "v_rot": 115.20150513539323,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_147",
+    "ra": 96.2181763418789,
+    "dec": -10.065107469732236,
+    "distance": 17.349772968349313,
+    "v_rot": 159.8445224960108,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_122",
+    "ra": 66.72897874891633,
+    "dec": 60.787584673626746,
+    "distance": 21.58098561540649,
+    "v_rot": 70.44482151847438,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_164",
+    "ra": 220.28350831798525,
+    "dec": 26.352837726163262,
+    "distance": 131.78063839890797,
+    "v_rot": 104.22485972603886,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_054",
+    "ra": 26.349513492847837,
+    "dec": -11.566035928456033,
+    "distance": 29.617193974529282,
+    "v_rot": 106.12301395188504,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_080",
+    "ra": 138.8197118122347,
+    "dec": 38.280721582610376,
+    "distance": 11.033245747612128,
+    "v_rot": 59.07295369819,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_043",
+    "ra": 335.7637981075074,
+    "dec": 15.96553514149989,
+    "distance": 15.706691728783467,
+    "v_rot": 79.86413334233711,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_075",
+    "ra": 278.550281147811,
+    "dec": -54.350720090666954,
+    "distance": 16.99695052025181,
+    "v_rot": 83.59377199831614,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_059",
+    "ra": 346.6097623528779,
+    "dec": 18.143933367373364,
+    "distance": 5.79354194377933,
+    "v_rot": 142.3247767569357,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_137",
+    "ra": 164.9133821173463,
+    "dec": -26.26076428935283,
+    "distance": 28.00468848836459,
+    "v_rot": 115.13190969897698,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_145",
+    "ra": 0.6248929466539499,
+    "dec": -72.46768060319341,
+    "distance": 23.89089289168858,
+    "v_rot": 114.81232759003959,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_058",
+    "ra": 120.46265109447081,
+    "dec": -12.584027601581843,
+    "distance": 27.93717328754878,
+    "v_rot": 115.6435759056135,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_034",
+    "ra": 305.6406151404228,
+    "dec": -13.399128268264718,
+    "distance": 47.59816443200627,
+    "v_rot": 130.5453397973779,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_154",
+    "ra": 90.46402274299169,
+    "dec": 1.8007942219871396,
+    "distance": 36.969641340757896,
+    "v_rot": 95.9329127152664,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_003",
+    "ra": 348.07167702773495,
+    "dec": -44.5607993044152,
+    "distance": 13.989481417823507,
+    "v_rot": 145.5738786582345,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_067",
+    "ra": 312.0807521165315,
+    "dec": -42.063181284957786,
+    "distance": 20.36017990574392,
+    "v_rot": 53.722237137052005,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_010",
+    "ra": 83.68177832951001,
+    "dec": 40.02743532447796,
+    "distance": 10.481965616840828,
+    "v_rot": 101.99836497150716,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_144",
+    "ra": 313.07292697355064,
+    "dec": -28.196677959174387,
+    "distance": 22.892416485850795,
+    "v_rot": 37.97635791996973,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_143",
+    "ra": 182.26656403289044,
+    "dec": 26.33718721326969,
+    "distance": 24.462519911855445,
+    "v_rot": 145.5160862823279,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_041",
+    "ra": 85.06155016008559,
+    "dec": -21.166248466141717,
+    "distance": 5.928931468763287,
+    "v_rot": 160.20034029811737,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_152",
+    "ra": 144.77044807021966,
+    "dec": 42.51290252694513,
+    "distance": 2.276595992153269,
+    "v_rot": 111.8348667716882,
+    "log_mstar": 6.0,
+    "environment": "void",
+    "rho_env": 0.2
+  },
+  {
+    "name": "SPARC_168",
+    "ra": 135.1683394505558,
+    "dec": 2.9460726468810106,
+    "distance": 150.0,
+    "v_rot": 115.70950466254261,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_119",
+    "ra": 123.28659639921614,
+    "dec": -17.9250080093826,
+    "distance": 144.77371637051507,
+    "v_rot": 88.84513208147185,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_093",
+    "ra": 18.882286697332873,
+    "dec": 27.50081046518121,
+    "distance": 17.05593138558496,
+    "v_rot": 116.14745572257696,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_139",
+    "ra": 91.34667077208451,
+    "dec": 37.46810592766681,
+    "distance": 19.850067918309808,
+    "v_rot": 146.3801041967008,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_017",
+    "ra": 59.90777737108276,
+    "dec": 74.61690931278365,
+    "distance": 46.16503947104323,
+    "v_rot": 102.17273340379386,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_114",
+    "ra": 190.5117692260792,
+    "dec": 23.460112615444217,
+    "distance": 24.406997451265056,
+    "v_rot": 188.3350978012256,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_040",
+    "ra": 18.024110276915614,
+    "dec": 55.45447084346836,
+    "distance": 27.635907530762864,
+    "v_rot": 104.8073756143847,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_048",
+    "ra": 180.33451328013078,
+    "dec": 16.878551214276012,
+    "distance": 8.7774146723077,
+    "v_rot": 114.53232180992862,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_131",
+    "ra": 354.34201147244494,
+    "dec": -36.15087884602805,
+    "distance": 8.83905737146746,
+    "v_rot": 91.07677737175473,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_044",
+    "ra": 297.66067447289214,
+    "dec": 12.27407947737799,
+    "distance": 44.26766020018119,
+    "v_rot": 145.6402930357934,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_045",
+    "ra": 342.79837469496704,
+    "dec": -53.007729000294866,
+    "distance": 16.662674149130673,
+    "v_rot": 235.8991758152627,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_100",
+    "ra": 251.1628390440496,
+    "dec": 40.12957770690355,
+    "distance": 12.115943154270763,
+    "v_rot": 114.01977780663192,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_121",
+    "ra": 336.17659126384467,
+    "dec": 36.25371426927218,
+    "distance": 24.38309909127204,
+    "v_rot": 163.47019388977162,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_005",
+    "ra": 112.23134079930625,
+    "dec": -72.55303063305404,
+    "distance": 19.22812701036054,
+    "v_rot": 122.72975485444195,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_047",
+    "ra": 209.0842262683038,
+    "dec": 62.293659648270705,
+    "distance": 56.99664905758761,
+    "v_rot": 249.22610579747754,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_035",
+    "ra": 312.6421926610331,
+    "dec": 18.05271456129654,
+    "distance": 48.395339705629944,
+    "v_rot": 103.49776952653494,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_173",
+    "ra": 69.79501520418384,
+    "dec": 48.251480242905494,
+    "distance": 11.397418510169857,
+    "v_rot": 53.78166698929828,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_108",
+    "ra": 15.775442482770172,
+    "dec": -69.23711366826124,
+    "distance": 36.596914493888036,
+    "v_rot": 142.31630828628565,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_030",
+    "ra": 345.0941847785176,
+    "dec": -53.91143604415899,
+    "distance": 7.062530950907642,
+    "v_rot": 130.84688931903608,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_092",
+    "ra": 170.1103630201556,
+    "dec": 71.90213239053516,
+    "distance": 18.274402501284857,
+    "v_rot": 142.02780647248608,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_162",
+    "ra": 16.097453436404923,
+    "dec": -51.16184926986241,
+    "distance": 22.14534833733803,
+    "v_rot": 95.93713339891032,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_007",
+    "ra": 215.12560799030283,
+    "dec": 10.079568200498713,
+    "distance": 12.017206906947871,
+    "v_rot": 119.7183974482222,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_016",
+    "ra": 83.49258631690124,
+    "dec": -42.324779601017816,
+    "distance": 7.848400252363674,
+    "v_rot": 209.6243416586963,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_150",
+    "ra": 66.79413994906523,
+    "dec": -25.17489902401445,
+    "distance": 23.28510834148886,
+    "v_rot": 56.547069715846455,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_064",
+    "ra": 129.9394918159611,
+    "dec": 58.29751219730028,
+    "distance": 40.921307873746784,
+    "v_rot": 67.4995261991003,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_009",
+    "ra": 270.5109101421605,
+    "dec": -26.200575693981317,
+    "distance": 25.85967706475201,
+    "v_rot": 32.41048428979259,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_155",
+    "ra": 29.028354025236126,
+    "dec": 30.592133075633697,
+    "distance": 23.44700586530781,
+    "v_rot": 118.53701036565867,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_049",
+    "ra": 120.85313075023508,
+    "dec": -15.162932511638878,
+    "distance": 6.151091995045276,
+    "v_rot": 199.53724458082186,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_128",
+    "ra": 0.3126048374282675,
+    "dec": -0.2092931863979702,
+    "distance": 12.610355334133532,
+    "v_rot": 85.83555993760957,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_124",
+    "ra": 239.79286799186883,
+    "dec": 12.937601866543522,
+    "distance": 6.639449682441688,
+    "v_rot": 137.71426532327308,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_138",
+    "ra": 159.32343297234394,
+    "dec": -0.959619129006071,
+    "distance": 22.0714210302111,
+    "v_rot": 39.180844244730345,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_013",
+    "ra": 20.185252998905487,
+    "dec": -11.638682257666643,
+    "distance": 81.93598774137878,
+    "v_rot": 88.14752373542163,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_037",
+    "ra": 61.22193230893532,
+    "dec": -6.878277742019771,
+    "distance": 8.131759300973574,
+    "v_rot": 134.36724643924373,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_116",
+    "ra": 263.8875578033489,
+    "dec": 74.06672220409385,
+    "distance": 22.420094569848253,
+    "v_rot": 92.26026547187313,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_118",
+    "ra": 157.88771362819386,
+    "dec": 47.09383680937632,
+    "distance": 75.65259841339234,
+    "v_rot": 120.00977080001941,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_052",
+    "ra": 342.1229735185377,
+    "dec": -62.44998349618581,
+    "distance": 54.81105101611106,
+    "v_rot": 110.77230307247069,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_112",
+    "ra": 142.7226038014806,
+    "dec": -47.76650782261263,
+    "distance": 7.655645750302894,
+    "v_rot": 226.16966523274422,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_032",
+    "ra": 12.910749725663155,
+    "dec": 47.159061884454246,
+    "distance": 25.72799210840627,
+    "v_rot": 191.4900800128875,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_167",
+    "ra": 248.63908384690228,
+    "dec": -31.647262546696762,
+    "distance": 32.61212120443117,
+    "v_rot": 75.38580460250262,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_026",
+    "ra": 289.0522989483143,
+    "dec": 9.065552720108409,
+    "distance": 6.526515325996815,
+    "v_rot": 293.3957744631539,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_172",
+    "ra": 124.80907172292758,
+    "dec": 17.599582932003205,
+    "distance": 7.491639969966527,
+    "v_rot": 89.09794218861957,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_096",
+    "ra": 222.56734233253974,
+    "dec": 65.29785533631446,
+    "distance": 5.146284523723744,
+    "v_rot": 115.69950895192576,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_091",
+    "ra": 144.12374392579278,
+    "dec": 16.49214819152787,
+    "distance": 34.86393523571049,
+    "v_rot": 301.5635608550956,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_127",
+    "ra": 129.0244691413525,
+    "dec": -26.513373922215834,
+    "distance": 26.478325872802348,
+    "v_rot": 133.50454359520756,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_002",
+    "ra": 202.28180011286597,
+    "dec": -15.817298264503297,
+    "distance": 18.850415410603993,
+    "v_rot": 168.61331753914587,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_020",
+    "ra": 349.09092703825604,
+    "dec": -44.294459262992405,
+    "distance": 27.20611283265571,
+    "v_rot": 151.48494000715417,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_110",
+    "ra": 221.2743277375091,
+    "dec": -14.80116757432367,
+    "distance": 8.293968670787919,
+    "v_rot": 111.08661436272777,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_123",
+    "ra": 197.64976384025803,
+    "dec": 40.06622698663118,
+    "distance": 44.18791468953441,
+    "v_rot": 134.94536190661188,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_132",
+    "ra": 331.9225573805286,
+    "dec": 42.99538850849639,
+    "distance": 53.08808069561643,
+    "v_rot": 69.3796686182935,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_153",
+    "ra": 76.92837135251511,
+    "dec": -0.7379956627200773,
+    "distance": 14.926004231219409,
+    "v_rot": 94.04425037694945,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_053",
+    "ra": 77.31060948187805,
+    "dec": 11.97421857413246,
+    "distance": 24.179432960638607,
+    "v_rot": 152.3638590102264,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_111",
+    "ra": 315.7179120195426,
+    "dec": -35.793584401707285,
+    "distance": 15.300064217958768,
+    "v_rot": 309.7755446438114,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_068",
+    "ra": 137.55599339167466,
+    "dec": 41.61506599233684,
+    "distance": 60.977369786565575,
+    "v_rot": 176.36878317489771,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_170",
+    "ra": 58.76204929441738,
+    "dec": 41.23723220049026,
+    "distance": 11.014080531891008,
+    "v_rot": 80.51435260944773,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_159",
+    "ra": 276.24490226376236,
+    "dec": -13.205757301888184,
+    "distance": 28.291181363910443,
+    "v_rot": 54.09052381222331,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_149",
+    "ra": 60.963309937616316,
+    "dec": -73.45456766369222,
+    "distance": 25.1613977888159,
+    "v_rot": 69.31672848247797,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_099",
+    "ra": 267.6903936490366,
+    "dec": 22.14575137000108,
+    "distance": 12.797681611014582,
+    "v_rot": 71.67358826776687,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_156",
+    "ra": 209.87888045116543,
+    "dec": 11.344693526805088,
+    "distance": 40.144336449863324,
+    "v_rot": 153.5045355950597,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_072",
+    "ra": 185.95990176181255,
+    "dec": -9.93859110545463,
+    "distance": 24.998762578449377,
+    "v_rot": 101.00223925588774,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_006",
+    "ra": 307.63884578884443,
+    "dec": -56.23276220843624,
+    "distance": 51.44908597243341,
+    "v_rot": 116.33948946981404,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_081",
+    "ra": 351.3307752876687,
+    "dec": -64.09407824325902,
+    "distance": 13.742059360729868,
+    "v_rot": 89.75201009457838,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_039",
+    "ra": 150.62154586896568,
+    "dec": -17.08681842748433,
+    "distance": 3.3627669935365034,
+    "v_rot": 102.15286849374779,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_142",
+    "ra": 29.735639439390994,
+    "dec": -48.42586966547248,
+    "distance": 10.610767493705875,
+    "v_rot": 48.98992062480219,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_085",
+    "ra": 20.200277147830803,
+    "dec": -34.12601575020396,
+    "distance": 23.452934871162093,
+    "v_rot": 212.5931372309712,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_051",
+    "ra": 274.26563104995563,
+    "dec": 64.90684854246228,
+    "distance": 9.471736231675393,
+    "v_rot": 133.509284041846,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_062",
+    "ra": 274.0206230096407,
+    "dec": 2.554947887605364,
+    "distance": 11.866433614699291,
+    "v_rot": 47.48010449043217,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_024",
+    "ra": 86.13283274503729,
+    "dec": -42.018535934099326,
+    "distance": 38.229307385440556,
+    "v_rot": 68.47220748905909,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_079",
+    "ra": 271.3865257913989,
+    "dec": 19.628657906542262,
+    "distance": 34.90694892379159,
+    "v_rot": 175.1391785430245,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_027",
+    "ra": 117.36568274378652,
+    "dec": -7.922371411102167,
+    "distance": 9.116372645475252,
+    "v_rot": 60.70412444464462,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_012",
+    "ra": 229.74691686658144,
+    "dec": 19.020552471395874,
+    "distance": 48.902548329632744,
+    "v_rot": 132.7267788799894,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_046",
+    "ra": 247.86996177836568,
+    "dec": 4.015727468197735,
+    "distance": 18.380202380228756,
+    "v_rot": 102.81650315626618,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_022",
+    "ra": 287.240795037391,
+    "dec": 47.4552928122544,
+    "distance": 14.601536699479322,
+    "v_rot": 110.6443155982162,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_021",
+    "ra": 8.886847927978172,
+    "dec": 65.55068902509802,
+    "distance": 27.679135782377287,
+    "v_rot": 94.96682325349553,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_008",
+    "ra": 192.25422022999567,
+    "dec": -15.206011808907501,
+    "distance": 13.641472404784016,
+    "v_rot": 192.1623200357231,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_084",
+    "ra": 137.7281428094976,
+    "dec": 6.284828189979579,
+    "distance": 32.313650033277895,
+    "v_rot": 83.89063387469575,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_004",
+    "ra": 187.30318443606225,
+    "dec": -3.7836338771548763,
+    "distance": 26.670193559014084,
+    "v_rot": 157.49470017394916,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_165",
+    "ra": 20.39420590608849,
+    "dec": 57.29541267751021,
+    "distance": 40.025950886344084,
+    "v_rot": 70.90598369399143,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_077",
+    "ra": 164.9036765696262,
+    "dec": -62.4605852183895,
+    "distance": 10.273650840005548,
+    "v_rot": 95.0686511026828,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_160",
+    "ra": 247.21350630089844,
+    "dec": 19.80755000568079,
+    "distance": 9.108096649849234,
+    "v_rot": 81.40035342412531,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_083",
+    "ra": 125.62966172263545,
+    "dec": -7.183327927814858,
+    "distance": 11.350504742372348,
+    "v_rot": 129.21217174968737,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_042",
+    "ra": 60.80391655537797,
+    "dec": 5.424166285041597,
+    "distance": 23.697191969496956,
+    "v_rot": 198.47255457235693,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_175",
+    "ra": 125.49222195125651,
+    "dec": 4.601833562221139,
+    "distance": 6.046783520282591,
+    "v_rot": 98.7139707200286,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_103",
+    "ra": 47.02603623790664,
+    "dec": 2.320996364800022,
+    "distance": 13.33031300923418,
+    "v_rot": 154.58267002000002,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_019",
+    "ra": 246.60245627252726,
+    "dec": 72.50264872501764,
+    "distance": 14.384945965372918,
+    "v_rot": 112.63040766941407,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_028",
+    "ra": 119.29920156216617,
+    "dec": 2.8888095115765244,
+    "distance": 15.203970567791352,
+    "v_rot": 144.7328510143451,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_097",
+    "ra": 157.17575823354926,
+    "dec": 28.429784509399628,
+    "distance": 13.70450778952931,
+    "v_rot": 74.42857202865858,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_151",
+    "ra": 37.60095632655043,
+    "dec": 12.42841802312752,
+    "distance": 20.227898893368355,
+    "v_rot": 95.01424647186336,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_018",
+    "ra": 335.59414469516605,
+    "dec": -50.72753487720166,
+    "distance": 23.13351478499791,
+    "v_rot": 144.46366595051413,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_038",
+    "ra": 164.6769024134326,
+    "dec": 40.87676336718536,
+    "distance": 82.73836966737747,
+    "v_rot": 112.70837058973815,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_076",
+    "ra": 198.5966631316549,
+    "dec": 3.59307607942122,
+    "distance": 14.864344558616677,
+    "v_rot": 103.24641717957971,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_102",
+    "ra": 141.1749260903646,
+    "dec": 24.35803538378695,
+    "distance": 14.207954150831208,
+    "v_rot": 147.21045061484108,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_033",
+    "ra": 230.0847260510924,
+    "dec": -54.668361639688506,
+    "distance": 13.79779900615084,
+    "v_rot": 176.578948612431,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_015",
+    "ra": 177.12850728886272,
+    "dec": 20.76181266978458,
+    "distance": 18.660071956913,
+    "v_rot": 88.12688041517733,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_057",
+    "ra": 206.05578411056618,
+    "dec": -33.89897494654937,
+    "distance": 28.576382769333733,
+    "v_rot": 229.75700941022004,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_174",
+    "ra": 283.81614328737527,
+    "dec": -70.4940768573662,
+    "distance": 25.5806392722945,
+    "v_rot": 116.69802069402049,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_157",
+    "ra": 38.04150325439601,
+    "dec": 68.61319920877219,
+    "distance": 18.9700326541888,
+    "v_rot": 147.65418855809165,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_163",
+    "ra": 2.5148048515557253,
+    "dec": -11.974554164071003,
+    "distance": 12.135278042849398,
+    "v_rot": 89.17716768112713,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_088",
+    "ra": 266.2787876978881,
+    "dec": 27.29863021188176,
+    "distance": 46.08422934694936,
+    "v_rot": 93.49208283570724,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_104",
+    "ra": 0.4302230269820617,
+    "dec": 54.8399269420581,
+    "distance": 21.89876397038242,
+    "v_rot": 146.56752791515396,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_069",
+    "ra": 142.4636011415065,
+    "dec": 15.289236163960647,
+    "distance": 16.41836207338286,
+    "v_rot": 74.20518484052276,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_065",
+    "ra": 2.873399373378165,
+    "dec": -65.21710846060267,
+    "distance": 15.724443042440898,
+    "v_rot": 198.9708230775333,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_129",
+    "ra": 148.55826272614428,
+    "dec": -24.9198813351869,
+    "distance": 34.67014173578234,
+    "v_rot": 138.62794324483284,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_171",
+    "ra": 188.4546270130782,
+    "dec": 64.15808138438625,
+    "distance": 7.677441701875194,
+    "v_rot": 68.09850781738245,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_055",
+    "ra": 180.3245994397307,
+    "dec": 28.964282868729388,
+    "distance": 20.460266632699213,
+    "v_rot": 135.7242567923791,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_146",
+    "ra": 174.40446490869044,
+    "dec": -3.1295419496284054,
+    "distance": 33.36500561675915,
+    "v_rot": 121.75824491314127,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_071",
+    "ra": 345.78386727122825,
+    "dec": -62.44788242830738,
+    "distance": 9.39499345477854,
+    "v_rot": 69.52753573502577,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_105",
+    "ra": 222.44519152073033,
+    "dec": -35.06476584626007,
+    "distance": 7.752012203053781,
+    "v_rot": 184.4431541090322,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_130",
+    "ra": 178.0107608316332,
+    "dec": 33.080535663704566,
+    "distance": 26.944791960204554,
+    "v_rot": 167.50188145617054,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_140",
+    "ra": 209.81661164113456,
+    "dec": -23.16980186935573,
+    "distance": 1.249170324346708,
+    "v_rot": 89.90740852138411,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_090",
+    "ra": 146.1212947534441,
+    "dec": 28.351304354481528,
+    "distance": 8.075134690928195,
+    "v_rot": 108.5702678880277,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_031",
+    "ra": 332.5655573318952,
+    "dec": -23.429355807905317,
+    "distance": 20.247725234282033,
+    "v_rot": 66.30432741124699,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_073",
+    "ra": 42.32022259786317,
+    "dec": -12.093918420339572,
+    "distance": 31.080984264795394,
+    "v_rot": 212.61522591635003,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_113",
+    "ra": 174.68896846285284,
+    "dec": -1.7066599415539059,
+    "distance": 62.1913998485314,
+    "v_rot": 160.73529080058705,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_126",
+    "ra": 164.81762589488292,
+    "dec": 8.06145290765374,
+    "distance": 18.58410394371252,
+    "v_rot": 67.87136666507104,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_161",
+    "ra": 351.3284323921006,
+    "dec": 50.309992162627495,
+    "distance": 19.78473742545453,
+    "v_rot": 135.13157837198412,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_107",
+    "ra": 342.96680303136617,
+    "dec": 19.80983870966807,
+    "distance": 17.488091148210415,
+    "v_rot": 148.31754976803884,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  },
+  {
+    "name": "SPARC_094",
+    "ra": 172.16771718263368,
+    "dec": 67.17497325242353,
+    "distance": 53.601909574007614,
+    "v_rot": 91.78528943292869,
+    "log_mstar": 6.0,
+    "environment": "filament",
+    "rho_env": 1.5
+  }
+]

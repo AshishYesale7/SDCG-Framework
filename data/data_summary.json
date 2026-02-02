@@ -1,92 +1,23 @@
 {
-  "timestamp": "2026-01-30T03:08:38.829069",
-  "data_directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data",
-  "datasets": {
-    "planck": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/planck",
-      "file_count": 1,
-      "files": [
-        {
-          "name": "planck_TT_binned.txt",
-          "size_kb": 0.7,
-          "modified": "2026-01-30T03:08:28.230141"
-        }
-      ]
-    },
-    "bao": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/bao",
-      "file_count": 1,
-      "files": [
-        {
-          "name": "boss_dr12_consensus.txt",
-          "size_kb": 0.2,
-          "modified": "2026-01-30T03:08:28.230800"
-        }
-      ]
-    },
-    "sne": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/sne",
-      "file_count": 2,
-      "files": [
-        {
-          "name": "pantheon_plus.dat",
-          "size_kb": 1.4,
-          "modified": "2026-01-30T03:08:33.192054"
-        },
-        {
-          "name": "sh0es_2022.txt",
-          "size_kb": 0.1,
-          "modified": "2026-01-30T03:08:33.192931"
-        }
-      ]
-    },
-    "growth": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/growth",
-      "file_count": 1,
-      "files": [
-        {
-          "name": "rsd_measurements.txt",
-          "size_kb": 0.3,
-          "modified": "2026-01-30T03:08:38.826350"
-        }
-      ]
-    },
-    "misc": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/misc",
-      "file_count": 3,
-      "files": [
-        {
-          "name": "planck2018_params.dat",
-          "size_kb": 0.7,
-          "modified": "2026-01-30T03:08:38.826552"
-        },
-        {
-          "name": "weak_lensing_s8.txt",
-          "size_kb": 0.1,
-          "modified": "2026-01-30T03:08:38.827124"
-        },
-        {
-          "name": "planck_params_simple.txt",
-          "size_kb": 0.2,
-          "modified": "2026-01-30T03:08:38.826852"
-        }
-      ]
-    },
-    "cgc_simulations": {
-      "directory": "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/cgc_simulations",
-      "file_count": 2,
-      "files": [
-        {
-          "name": "hubble_evolution.txt",
-          "size_kb": 4.1,
-          "modified": "2026-01-30T03:08:38.828246"
-        },
-        {
-          "name": "growth_evolution.txt",
-          "size_kb": 3.5,
-          "modified": "2026-01-30T03:08:38.828979"
-        }
-      ]
-    }
-  }
+  "datasets_created": [
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/sparc/sparc_dwarfs.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/sdss_voids/sdss_dr7_voids.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/sdss_voids/environmental_densities.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/dwarfs/local_group_dwarfs.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/dwarfs/void_dwarfs.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/stacking_analysis/velocity_stacking_results.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/stacking_analysis/beta0_sensitivity.json",
+    "/Users/ashishyesale/Videos/EDU/Hypothesis/MCMC_cgc/data/stacking_analysis/casimir_noise_budget.json"
+  ],
+  "total_galaxies": {
+    "SPARC_dwarfs": 23,
+    "Local_Group_dwarfs": 25,
+    "Void_dwarfs": 12,
+    "Environmental_catalog": 20
+  },
+  "analyses_performed": [
+    "Stacking analysis: void vs cluster velocity dispersions",
+    "\u03b2\u2080 sensitivity: \u00b110% variance impact on H\u2080 tension",
+    "Casimir noise budget: SNR at 95 \u03bcm"
+  ]
 }
