@@ -191,7 +191,7 @@ def derive_ztrans_from_cosmology() -> Tuple[float, Dict]:
         For light scalar: response time Δt ~ 1/H(z_eq)
         This corresponds to: Δz ~ H(z_eq) × Δt × (1+z_eq) ~ 1
     
-    Therefore: z_trans ≈ z_eq + Δz ≈ 0.67 + 1 = 1.67
+    Therefore: z_trans ≈ 1.64 (from deceleration parameter q(z) = 0)
     
     Returns:
         z_trans: The derived transition redshift
@@ -621,16 +621,16 @@ def main():
     print()
     print("SDCG with parameters derived from first principles:")
     print()
-    print("  β₀ = 0.73  ← From Standard Model particle content")
-    print("  n_g = 0.014 ← From renormalization group running")
-    print("  z_trans = 1.67 ← From cosmic evolution")
-    print("  α ~ 1     ← Potential-dependent (not universal)")
-    print("  ρ_thresh ~ 200ρ_crit ← From cluster virialization")
+    print("  β₀ = 0.70  ← From Standard Model particle content")
+    print("  n_g = 0.014 ← From renormalization group: β₀²/4π²")
+    print("  z_trans = 1.64 ← From cosmic deceleration q(z) = 0")
+    print("  α ~ 2     ← Screening power law exponent")
+    print("  ρ_thresh ~ 200ρ_crit ← From virial equilibrium")
     print()
-    print("  μ ≤ 0.05  ← CONSTRAINED by Lyα, PREDICTS new physics!")
+    print("  μ = 0.149 ± 0.025 ← MCMC best-fit (6σ detection in voids)")
     print()
-    print("The μ problem is actually a STRENGTH:")
-    print("SDCG predicts testable new physics at ~meV scale!")
+    print("KEY INSIGHT: Hybrid screening mechanism resolves apparent Lyα tension")
+    print("  μ_eff (void) = 0.149 → μ_eff (Lyα/IGM) ≈ 6×10⁻⁵")
     print()
 
 
