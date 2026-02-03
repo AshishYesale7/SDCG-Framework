@@ -180,13 +180,13 @@ print()
 
 # Quantitative estimate
 H0_fid = 67.4  # km/s/Mpc
-mu_fid = 0.045
+mu_fid = 0.149  # MCMC best-fit in voids (thesis v10)
 
 # Approximate degeneracy: growth rate scales as (1 + μ/2)
 # To maintain same growth with μ=0, need to adjust H₀
 
-delta_mu = 0.02  # Change in μ
-# Growth enhancement: (1 + 0.065/2) / (1 + 0.045/2) ≈ 1.01
+delta_mu = 0.025  # Uncertainty in μ
+# Growth enhancement calculation
 growth_change = (1 + (mu_fid + delta_mu)/2) / (1 + mu_fid/2)
 
 # This could be compensated by changing H₀ by similar amount
@@ -358,8 +358,8 @@ print()
 
 print("BOTTOM LINE:")
 print("  • ONLY μ is truly free — all other SDCG params are fixed from theory")
-print("  • n_g = 0.014 is FIXED from β₀ = 0.74 (QFT)")
+print("  • n_g = 0.014 is FIXED from β₀ = 0.70 (QFT)")
 print("  • α = 2, γ = 3, ρ_thresh = 200ρ_crit are FIXED from theory")
-print("  • z_trans ≈ 1.63 is derived from cosmic acceleration")
-print("  • The MCMC constrains μ_eff = μ × ⟨S⟩ = 0.045 ± 0.019")
+print("  • z_trans = 1.64 is derived from cosmic deceleration q(z) = 0")
+print("  • The MCMC constrains μ = 0.149 ± 0.025 in void environments (6σ)")
 print()
