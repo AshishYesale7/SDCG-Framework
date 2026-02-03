@@ -199,7 +199,7 @@ ax.legend(fontsize=11)
 # z_trans vs prediction
 ax = axes[1]
 ax.hist(chains[:, 8], bins=60, density=True, alpha=0.7, color='steelblue', edgecolor='white')
-ax.axvline(1.67, color='orange', lw=2, ls='--', label=r'EFT: $z_{acc} + \Delta z = 1.67$')
+ax.axvline(1.64, color='orange', lw=2, ls='--', label=r'EFT: $z_{acc} + \Delta z = 1.64$')
 ax.axvline(np.mean(chains[:, 8]), color='darkblue', lw=2, label='Fitted')
 zt_mean, zt_std = np.mean(chains[:, 8]), np.std(chains[:, 8])
 ax.set_xlabel(r'$z_{trans}$', fontsize=14)

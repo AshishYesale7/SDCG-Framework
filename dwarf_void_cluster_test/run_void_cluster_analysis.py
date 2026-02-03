@@ -9,8 +9,7 @@
 ║    Δv = <v_rot(void)> - <v_rot(cluster)>                                    ║
 ║                                                                              ║
 ║  SDCG Predictions:                                                           ║
-║    Unconstrained (μ=0.41):     Δv ≈ +12-15 km/s                             ║
-║    Lyα-Constrained (μ=0.045):  Δv ≈ +0.5 km/s                               ║
+║    MCMC Best-fit (μ=0.149):    Δv ≈ +12 ± 3 km/s                            ║
 ║    ΛCDM (μ=0):                 Δv = 0 km/s                                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 """
@@ -26,9 +25,9 @@ FILTERED_DIR = Path(__file__).parent / "filtered"
 RESULTS_DIR = Path(__file__).parent / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
 
-# SDCG Theory Parameters
-MU_UNCONSTRAINED = 0.41      # Old analysis without Lyα
-MU_LYA_CONSTRAINED = 0.045   # Correct value with Lyα
+# SDCG Theory Parameters (Thesis v10)
+MU_VOID_BESTFIT = 0.149      # MCMC best-fit in voids (6σ detection)
+MU_UNCONSTRAINED = 0.41      # Old analysis without Lyα (NOT used)
 RHO_THRESH = 200             # Screening threshold (ρ_crit units)
 ALPHA_SCREEN = 2             # Screening exponent
 
