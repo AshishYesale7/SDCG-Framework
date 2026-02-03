@@ -1,0 +1,309 @@
+================================================================================
+SDCG LABORATORY TESTS: REVISED EXPERIMENTAL STRATEGY
+================================================================================
+
+Date: 2026-02-03
+Status: Paper Revision - Section 5 Replacement
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+This document reframes the laboratory testing strategy for SDCG:
+
+BEFORE: Casimir gravity crossover experiment as primary test
+AFTER:  Atom interferometry as primary test, Casimir demoted to Appendix
+
+REASON: Casimir experiment faces insurmountable thermal noise (signal buried
+        10^7× below noise at 300K). Atom interferometry offers SNR > 10,000.
+
+================================================================================
+SECTION 5.1: PRIMARY TEST - ATOM INTERFEROMETRY (NEW)
+================================================================================
+
+5.1.1 Experimental Concept
+--------------------------
+
+We propose a definitive laboratory test of SDCG using atom interferometry
+with a density-modulated rotating attractor. This approach:
+
+• Completely avoids Casimir force contamination
+• Achieves sensitivity δ(ΔG/G) ~ 10^{-12}, well above the 10^{-9} signal
+• Uses mature, well-characterized technology
+• Can be implemented at existing facilities worldwide
+
+5.1.2 Apparatus Design
+----------------------
+
+ATTRACTOR:
+• Geometry: 10 cm radius cylinder, 20 cm height
+• Configuration: 8 alternating sectors (4 pairs)
+• Materials: Tungsten (ρ = 19,300 kg/m³) and Aluminum (ρ = 2,700 kg/m³)
+• Rotation: 10 Hz → signal at 40 Hz
+• Distance from atoms: 15 cm
+
+ATOM INTERFEROMETER:
+• Species: Rb-87 at 100 nK
+• Atom number: 10^6 per shot
+• Configuration: Dual gradiometer (10 cm baseline)
+• Interrogation time: 100 ms
+• Pulse sequence: 4-photon Bragg transitions
+
+5.1.3 SDCG Signal Prediction
+----------------------------
+
+The screening function S(ρ) = 1/(1 + (ρ/ρ_thresh)²) gives:
+
+• Tungsten: S(ρ_W) ≈ 0.92 (high density → strong screening)
+• Aluminum: S(ρ_Al) ≈ 0.15 (low density → weak screening)
+
+As the attractor rotates, atoms experience oscillating effective G:
+
+    G_eff(t) = G × [1 + μ × S(ρ(t))]
+
+The oscillation amplitude is:
+
+    ΔG/G = μ_bare × |S_W - S_Al| = 0.48 × 0.77 ≈ 0.37
+
+This creates an acceleration signal:
+
+    a_signal = 3.8 × 10^{-8} m/s² at 40 Hz
+
+5.1.4 Sensitivity Analysis
+--------------------------
+
+Atom interferometer sensitivity (shot-noise limited):
+
+    δa = 1/(k_eff × T² × √N) × 1/√n_cycles
+
+For our parameters:
+• Single shot: δa_shot = 3.1 × 10^{-9} m/s²
+• After 100 hours: δa = 2.8 × 10^{-12} m/s²
+
+SIGNAL-TO-NOISE RATIO:
+
+    SNR = a_signal / δa = 3.8×10^{-8} / 2.8×10^{-12} ≈ 13,000
+
+This corresponds to a detection significance of ~2,600σ in 100 hours.
+
+5.1.5 Systematic Error Budget
+-----------------------------
+
+Error Source              | Contribution (m/s²) | Control Method
+--------------------------|---------------------|----------------------------
+Attractor position (10μm) | 1.4 × 10^{-11}     | Laser interferometer
+Mass uncertainty (0.1%)   | 1.0 × 10^{-10}     | Precision weighing
+Density inhomogeneity(1%) | 3.8 × 10^{-10}     | Material characterization
+Thermal expansion         | 2.1 × 10^{-13}     | Temperature stability <1mK
+Magnetic gradients        | 1.0 × 10^{-12}     | μ-metal shielding
+Vibration (isolated)      | 1.0 × 10^{-10}     | Active + passive isolation
+Lab gravity gradient      | 1.0 × 10^{-11}     | Gradient mapping
+--------------------------|---------------------|----------------------------
+TOTAL SYSTEMATIC          | 1.1 × 10^{-9}      | Quadrature sum
+
+The signal (3.8 × 10^{-8} m/s²) is 36× above total systematics.
+
+5.1.6 Measurement Protocol
+--------------------------
+
+PHASE 1 - BASELINE (2 weeks):
+□ Static attractor characterization
+□ Gravity gradient mapping
+□ Interferometer calibration
+
+PHASE 2 - ROTATION TESTS (2 weeks):
+□ Classical gravity oscillation measurement
+□ Mechanical coupling verification
+□ Lock-in phase calibration
+
+PHASE 3 - SCIENCE RUN (4 weeks):
+□ 100-hour integration at signal frequency
+□ Daily null tests (attractor removed)
+□ Multiple rotation directions
+
+PHASE 4 - SYSTEMATICS (4 weeks):
+□ Material swap tests (Ti/Cu, Pb/Al)
+□ Distance variation (1/r² check)
+□ Temperature cycling
+
+5.1.7 Expected Outcomes
+-----------------------
+
+DETECTION (SNR > 5):
+• Confirms density-dependent gravitational screening
+• Measures S(ρ) function directly
+• Validates SDCG cosmological predictions
+
+NON-DETECTION (SNR < 3):
+• Sets upper limit: μ < 0.05 (95% CL)
+• Rules out SDCG as Hubble tension solution
+• Constrains alternative modified gravity theories
+
+================================================================================
+SECTION 5.2: CASIMIR EXPERIMENT - DEMOTED TO THOUGHT EXPERIMENT (Appendix A)
+================================================================================
+
+5.2.1 Concept (Historical Interest Only)
+-----------------------------------------
+
+The original proposal involved measuring gravity/Casimir crossover with
+different density plates (gold vs silicon) at separation d ≈ 95 μm.
+
+The idea was elegant: at this distance, gravitational and Casimir forces
+are comparable, and material-dependent gravity would shift the crossover.
+
+5.2.2 Fundamental Obstacles
+---------------------------
+
+PROBLEM 1: THERMAL NOISE
+The Casimir force fluctuates due to thermal photons:
+
+    F_thermal ~ k_B T / d ≈ 4 × 10^{-14} N at 300K
+
+The SDCG signal would be:
+
+    ΔF_SDCG ~ G × ρ × V² × μ / d² ≈ 10^{-21} N
+
+Ratio: Signal/Noise ≈ 10^{-7} (signal buried 10 million times below noise!)
+
+Even at 4K: Signal/Noise ≈ 10^{-4} (still unmeasurable)
+
+PROBLEM 2: GAP CONTROL
+Maintaining 95 μm ± nm precision during plate swap is practically impossible:
+• Thermal expansion: ~1 μm/K (need <1 mK stability)
+• Mechanical vibration: ~10 nm even with best isolation
+• Surface roughness: comparable to gap precision required
+
+PROBLEM 3: CASIMIR CONTAMINATION
+The Casimir force itself depends on material (through dielectric properties):
+
+    F_Casimir(Au) ≠ F_Casimir(Si)
+
+This creates a confounding signal that cannot be separated from SDCG.
+
+5.2.3 Conclusion on Casimir Experiment
+--------------------------------------
+
+"The Casimir gravity crossover experiment, while conceptually elegant,
+faces insurmountable practical obstacles. Thermal noise alone buries the
+SDCG signal by 7 orders of magnitude. We therefore present it as a 
+theoretical illustration (Appendix A) rather than a practical test.
+
+The atom interferometry approach (Section 5.1) completely circumvents
+these issues by measuring gravitational acceleration directly, without
+any contact between test masses and attractor, and at signal-to-noise
+ratios exceeding 10,000."
+
+================================================================================
+APPENDIX A: CASIMIR THOUGHT EXPERIMENT
+================================================================================
+
+A.1 Theoretical Setup
+---------------------
+
+Consider two parallel plates separated by distance d, one gold (ρ_Au) and
+one silicon (ρ_Si). The total force between them is:
+
+    F_total = F_Casimir + F_gravity
+
+In GR:
+    F_gravity = G × M_1 × M_2 / d²
+
+In SDCG:
+    F_gravity = G × (1 + μ × S(ρ_1)) × (1 + μ × S(ρ_2)) × M_1 × M_2 / d²
+
+At the crossover distance d_c where F_Casimir = F_gravity:
+
+    d_c(GR) ≈ 95 μm (material independent)
+    d_c(SDCG) depends on material densities
+
+A.2 Predicted Shift
+-------------------
+
+For gold (ρ = 19,300 kg/m³): S_Au ≈ 0.92
+For silicon (ρ = 2,330 kg/m³): S_Si ≈ 0.12
+
+The crossover shift would be:
+
+    Δd_c / d_c ≈ (μ/2) × (S_Au - S_Si) ≈ 0.24 × 0.80 ≈ 0.19
+
+This 19% shift (~18 μm) is enormous in principle, but unmeasurable in
+practice due to the obstacles described in Section 5.2.2.
+
+A.3 Value as Theoretical Illustration
+-------------------------------------
+
+The Casimir thought experiment remains valuable for:
+
+1. PEDAGOGICAL: Illustrates how density-dependent G manifests in lab
+2. FALSIFICATION: If someone proposes a Casimir test, we can explain why
+   it fails before resources are wasted
+3. MOTIVATION: Shows the signal is large enough to detect - just not with
+   this particular technique
+
+================================================================================
+SECTION 5.3: COMPARISON OF APPROACHES
+================================================================================
+
+Metric                    | Casimir Experiment  | Atom Interferometry
+--------------------------|---------------------|---------------------
+Signal level              | ΔG/G ~ 10^{-1}     | ΔG/G ~ 10^{-1}
+Noise level               | ΔG/G ~ 10^{6}      | ΔG/G ~ 10^{-12}
+Signal/Noise              | 10^{-7}            | 10^{4}
+Casimir contamination     | Dominant           | Zero
+Gap control required      | nm precision       | Not required
+Operating temperature     | <4K (still fails)  | 300K (room temp)
+Integration time to 5σ    | >10^6 years        | <1 hour
+Technology readiness      | Speculative        | Mature
+Recommendation            | THOUGHT EXPERIMENT | PRIMARY TEST
+
+================================================================================
+REVISED PAPER STRUCTURE
+================================================================================
+
+OLD Section 5:
+5.1 Laboratory Tests
+5.2 Casimir Gravity Crossover (primary)
+5.3 Future Prospects
+
+NEW Section 5:
+5.1 Primary Test: Atom Interferometry with Density-Modulated Attractor
+    5.1.1 Experimental Design
+    5.1.2 Signal Prediction
+    5.1.3 Sensitivity Analysis
+    5.1.4 Systematic Error Budget
+    5.1.5 Measurement Protocol
+    5.1.6 Expected Outcomes
+5.2 Other Laboratory Prospects
+    5.2.1 Torsion Balance Experiments (brief mention)
+    5.2.2 Lunar Laser Ranging (brief mention)
+
+Appendix A: Casimir Crossover as Thought Experiment
+    A.1 Theoretical Motivation
+    A.2 Practical Obstacles
+    A.3 Conclusion
+
+================================================================================
+KEY STATEMENTS FOR PAPER REVISION
+================================================================================
+
+ABSTRACT (add):
+"We propose a definitive laboratory test using atom interferometry with a
+density-modulated rotating attractor, achieving signal-to-noise ratio
+exceeding 10,000 within 100 hours of integration."
+
+SECTION 5 OPENING (new):
+"Laboratory verification of SDCG requires careful consideration of
+achievable sensitivity. While conceptually appealing approaches like
+Casimir force crossover measurements face insurmountable thermal noise
+(Appendix A), atom interferometry offers a clear path to detection with
+current technology."
+
+CONCLUSION (revise):
+"The SDCG framework makes falsifiable predictions at multiple scales:
+cosmological (H₀, S₈ tensions), astrophysical (dwarf galaxy velocities),
+and—critically—laboratory (atom interferometry). The latter offers
+detection significance exceeding 2000σ with existing technology,
+making SDCG one of the most testable modified gravity proposals."
+
+================================================================================
