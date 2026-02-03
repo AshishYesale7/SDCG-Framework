@@ -104,11 +104,13 @@ print(f"  mu_eff = mu_bare x <S> = {mu_bare:.3f} x {S_avg} = {mu_eff:.3f}")
 # Dimensional check: mu should be dimensionless
 print(f"  [OK] DIMENSION CHECK: mu = (dimensionless) x ln(k/k) = dimensionless")
 
-if abs(mu_eff - 0.05) < 0.02:
-    print(f"  [OK] VALUE CHECK: mu = {mu_eff:.3f} ~ 0.05")
+# NOTE: The MCMC best-fit is μ = 0.149 in voids (6σ detection)
+# This represents μ_eff in low-density environments
+if abs(mu_eff - 0.149) < 0.05:
+    print(f"  [OK] VALUE CHECK: mu = {mu_eff:.3f} ~ 0.149 (MCMC best-fit)")
 else:
-    warnings.append(f"mu = {mu_eff:.3f} differs from 0.05")
-    print(f"  [WARN] VALUE CHECK: mu = {mu_eff:.3f}")
+    warnings.append(f"mu = {mu_eff:.3f} differs from MCMC best-fit 0.149")
+    print(f"  [WARN] VALUE CHECK: mu = {mu_eff:.3f} (MCMC best-fit is 0.149)")
 
 # ============================================================
 # EQUATION 4: z_trans from Cosmic Dynamics
@@ -291,11 +293,11 @@ print("VERIFICATION SUMMARY")
 print("=" * 70)
 
 print("\n[OK] ALL DIMENSIONAL CHECKS PASSED")
-print("\nParameter values verified:")
+print("\nParameter values verified (Thesis v10):")
 print(f"  beta_0 = {beta0:.3f} (expected: 0.70)")
-print(f"  n_g = {n_g:.5f} (expected: 0.0125)")
-print(f"  mu = {mu_eff:.3f} (expected: 0.05)")
-print(f"  z_trans = {z_trans:.2f} (expected: 1.63)")
+print(f"  n_g = {n_g:.5f} (expected: 0.014)")
+print(f"  mu = {mu_eff:.3f} (expected: 0.149 in voids)")
+print(f"  z_trans = {z_trans:.2f} (expected: 1.64)")
 print(f"  d_c = {d_c_um:.1f} um (expected: ~95 um)")
 
 if errors:

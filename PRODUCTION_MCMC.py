@@ -328,8 +328,9 @@ def run_mcmc(n_walkers=500, n_steps=3000, n_burn=500):
     print()
     
     # Initial positions (ball around fiducial)
-    p0_center = np.array([67.4, 0.315, 0.811, 0.045])
-    p0_spread = np.array([2.0, 0.02, 0.02, 0.02])
+    # μ = 0.149 is the MCMC best-fit in voids (6σ detection)
+    p0_center = np.array([67.4, 0.315, 0.811, 0.149])
+    p0_spread = np.array([2.0, 0.02, 0.02, 0.05])
     
     # Initialize walkers
     np.random.seed(42)

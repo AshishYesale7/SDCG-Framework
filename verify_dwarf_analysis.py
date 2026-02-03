@@ -50,9 +50,9 @@ if dwarf_file.exists():
         print(f"t-test: t={t_stat:.3f}, p={p_val:.4f}")
         
         print("\n" + "=" * 70)
-        print("SDCG PREDICTION")
+        print("SDCG PREDICTION (Thesis v10: μ = 0.149)")
         print("=" * 70)
-        mu = 0.045
+        mu = 0.149  # MCMC best-fit in voids (6σ detection)
         g_z0 = 0.3
         v_typical = 80
         delta_v_pred = v_typical * (np.sqrt(1 + mu * g_z0) - 1)
