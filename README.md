@@ -201,14 +201,14 @@ At fixed mass, if G is constant → V_rot is constant.
 
 | Document                                        | Description                                                     | Location                                           |
 | ----------------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------- |
-| **SDCG_DERIVATIONS_AND_IMPLEMENTATION_v13.pdf** | Complete mathematical derivations from QFT to observables (v13) | [PDF](SDCG_DERIVATIONS_AND_IMPLEMENTATION_v13.pdf) |
+| **CGC_THESIS_CHAPTER_v13.pdf** | Main thesis document (v13, mass-matched) | [PDF](thesis_materials/DRAFT/v13/CGC_THESIS_CHAPTER_v13.pdf) |
 
 ### Parameter Documentation
 
 | Document                               | Description                       | Location                                       |
 | -------------------------------------- | --------------------------------- | ---------------------------------------------- |
-| **THESIS_V12_CANONICAL_PARAMETERS.md** | Official v12 parameter values     | [Markdown](THESIS_V12_CANONICAL_PARAMETERS.md) |
-| **v12_parameters.py**                  | Python module with all parameters | [Python](v12_parameters.py)                    |
+| **THESIS_V13_CANONICAL_PARAMETERS.md** | Official v12 parameter values     | [Markdown](THESIS_V12_CANONICAL_PARAMETERS.md) |
+| **v13_parameters.py**                  | Python module with all parameters | [Python](v12_parameters.py)                    |
 | **OFFICIAL_CGC_PARAMETERS.txt**        | Plain text parameter reference    | [Text](OFFICIAL_CGC_PARAMETERS.txt)            |
 
 ---
@@ -266,7 +266,7 @@ SDCG-Framework/
 |
 +-- Thesis Documents
 |   +-- SDCG_DERIVATIONS_AND_IMPLEMENTATION.pdf
-|   +-- SDCG_DERIVATIONS_AND_IMPLEMENTATION_v13.pdf
+|   +-- thesis_materials/DRAFT/v13/CGC_THESIS_CHAPTER_v13.pdf
 |
 +-- v12_parameters.py                  # Canonical parameter values
 +-- generate_thesis_comparison.py      # Publication-quality plots
