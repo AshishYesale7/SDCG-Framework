@@ -5,12 +5,12 @@ If you use this code in your research, please cite:
 ## Primary Citation
 
 ```bibtex
-@software{cgc_mcmc,
-  author       = {CGC Collaboration},
-  title        = {CGC-MCMC: Casimir-Gravity Crossover Cosmological Analysis},
+@software{sdcg_framework,
+  author       = {Ashish Vasant Yesale},
+  title        = {SDCG-Framework: Scale-Dependent Crossover Gravity Cosmological Analysis},
   year         = {2026},
   publisher    = {GitHub},
-  url          = {https://github.com/yourusername/MCMC_cgc}
+  url          = {https://github.com/AshishYesale7/SDCG-Framework}
 }
 ```
 
@@ -19,14 +19,21 @@ If you use this code in your research, please cite:
 The theoretical framework is based on:
 
 ```bibtex
-@article{cgc_theory,
-  title        = {Scale-Dependent Crossover Gravity: A Unified Framework for Cosmological Tensions},
-  author       = {Author Name},
-  journal      = {Journal Name},
+@article{sdcg_theory,
+  title        = {Scale-Dependent Crossover Gravity: A Falsifiable Modified Gravity Framework from Effective Field Theory},
+  author       = {Ashish Vasant Yesale},
+  journal      = {arXiv preprint},
   year         = {2026},
   note         = {In preparation}
 }
 ```
+
+## Key Results (v13)
+
+- **4.5σ detection** of SDCG residual signal in dwarf galaxies
+- Mass-matched methodology with sample-weighted tidal stripping
+- H₀ tension reduction: 61% (4.8σ → 1.9σ)
+- S₈ tension reduction: 82% (3.1σ → 0.6σ)
 
 ## Data Sources
 
@@ -66,6 +73,68 @@ This analysis uses publicly available data from:
   year         = {2021},
   volume       = {103},
   pages        = {083533}
+}
+```
+
+### Cosmological Simulations
+
+```bibtex
+@article{eagle,
+  author       = {Schaye, Joop and others},
+  title        = {The EAGLE project: simulating the evolution and assembly of galaxies},
+  journal      = {MNRAS},
+  year         = {2015},
+  volume       = {446},
+  pages        = {521}
+}
+
+@article{illustristng,
+  author       = {Pillepich, Annalisa and others},
+  title        = {First results from the IllustrisTNG simulations},
+  journal      = {MNRAS},
+  year         = {2018},
+  volume       = {475},
+  pages        = {648}
+}
+
+@article{simba,
+  author       = {Davé, Romeel and others},
+  title        = {SIMBA: Cosmological simulations with black hole growth and feedback},
+  journal      = {MNRAS},
+  year         = {2019},
+  volume       = {486},
+  pages        = {2827}
+}
+
+@article{fire,
+  author       = {Hopkins, Philip F. and others},
+  title        = {FIRE-2 simulations: physics versus numerics},
+  journal      = {MNRAS},
+  year         = {2018},
+  volume       = {480},
+  pages        = {800}
+}
+```
+
+### Neural Network Emulators
+
+```bibtex
+@article{lace,
+  author       = {Cabayol-Garcia, Laura and others},
+  title        = {LaCE: Lyman-alpha Cosmology Emulator},
+  journal      = {MNRAS},
+  year         = {2023},
+  volume       = {523},
+  pages        = {3219}
+}
+
+@article{cosmopower,
+  author       = {Spurio Mancini, Alessio and others},
+  title        = {CosmoPower: emulating cosmological power spectra},
+  journal      = {MNRAS},
+  year         = {2022},
+  volume       = {511},
+  pages        = {1771}
 }
 ```
 
